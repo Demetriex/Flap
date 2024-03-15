@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddkecm5lsq4e"]
+
+[ext_resource type="TileSet" uid="uid://ofpeeqmrp8s4" path="res://assets/tilemap/tile_set.tres" id="1_gex00"]
+
+[node name="TileMap" type="TileMap"]
+tile_set = ExtResource("1_gex00")
+format = 2
+layer_0/name = "background"
+layer_1/name = "foreground"
+layer_1/tile_data = PackedInt32Array()
