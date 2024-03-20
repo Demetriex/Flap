@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://src/parallax.gd" id="1_0w74d"]
 [ext_resource type="Script" path="res://src/game.gd" id="1_osep5"]
-[ext_resource type="PackedScene" uid="uid://sb2l0qnpf27d" path="res://src/player.tscn" id="1_otp77"]
+[ext_resource type="PackedScene" uid="uid://sb2l0qnpf27d" path="res://player.tscn" id="1_otp77"]
 [ext_resource type="PackedScene" uid="uid://ddkecm5lsq4e" path="res://assets/tilemap/background_tilemap.tscn" id="2_qjanh"]
 [ext_resource type="PackedScene" uid="uid://1kfal8st3ofp" path="res://src/obstacle.tscn" id="3_yx5w4"]
 
@@ -50,3 +50,5 @@ position = Vector2(193, 190)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("RectangleShape2D_gj2pm")
 metadata/_edit_lock_ = true
+
+[node name="Timer" type="Timer" parent="."]
