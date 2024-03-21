@@ -1,6 +1,6 @@
 extends Node2D
 
-var obstacle := preload("res://src/obstacle.tscn")
+var obstacle := preload("res://src/obstacle/obstacle.tscn")
 
 @onready var timer := $Timer
 @onready var obstacles_container := $ParallaxBackground/Obstacles

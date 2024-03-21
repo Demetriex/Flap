@@ -1,11 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://1kfal8st3ofp"]
+[gd_scene load_steps=4 format=3 uid="uid://1kfal8st3ofp"]
 
-[ext_resource type="Script" path="res://src/obstacle.gd" id="1_5calj"]
-[ext_resource type="PackedScene" uid="uid://ddkecm5lsq4e" path="res://assets/tilemap/background_tilemap.tscn" id="1_fkgqm"]
+[ext_resource type="Script" path="res://src/obstacle/obstacle.gd" id="1_7n28x"]
+[ext_resource type="PackedScene" uid="uid://ddkecm5lsq4e" path="res://assets/tilemap/background_tilemap.tscn" id="2_kgpcs"]
+[ext_resource type="PackedScene" uid="uid://cfk1t58xr2hwq" path="res://src/obstacle/game_over_area.tscn" id="3_ugxr4"]
 
 [node name="Obstacle" type="Node2D"]
-script = ExtResource("1_5calj")
+script = ExtResource("1_7n28x")
 
-[node name="TileMap" parent="." instance=ExtResource("1_fkgqm")]
-z_index = 2
+[node name="TileMap" parent="." instance=ExtResource("2_kgpcs")]
 layer_0/tile_data = PackedInt32Array(-655360, 65538, 6, -589824, 65538, 6, -524288, 65538, 6, -458752, 65538, 6, -393216, 65538, 6, -327680, 65538, 6, -262144, 65538, 6, -196608, 65538, 6, -131072, 65538, 6, -65536, 196610, 805306369, 327680, 65538, 1, 393216, 65538, 6, 458752, 65538, 6, 524288, 65538, 6, 589824, 65538, 6, 655360, 65538, 6, 720896, 65538, 6, 786432, 65538, 6, 851968, 65538, 6, 917504, 65538, 6, -655359, 131074, 6, -589823, 131074, 6, -524287, 131074, 6, -458751, 131074, 6, -393215, 131074, 6, -327679, 131074, 6, -262143, 131074, 6, -196607, 131074, 6, -131071, 131074, 6, -65535, 131074, 805306369, 327681, 131074, 1, 393217, 131074, 6, 458753, 131074, 6, 524289, 131074, 6, 589825, 131074, 6, 655361, 131074, 6, 720897, 131074, 6, 786433, 131074, 6, 851969, 131074, 6, 917505, 131074, 6, -655358, 196610, 6, -589822, 196610, 6, -524286, 196610, 6, -458750, 196610, 6, -393214, 196610, 6, -327678, 196610, 6, -262142, 196610, 6, -196606, 196610, 6, -131070, 196610, 6, -65534, 65538, 805306369, 327682, 196610, 1, 393218, 196610, 6, 458754, 196610, 6, 524290, 196610, 6, 589826, 196610, 6, 655362, 196610, 6, 720898, 196610, 6, 786434, 196610, 6, 851970, 196610, 6, 917506, 196610, 6)
+metadata/_edit_lock_ = true
+
+[node name="GameOverArea" parent="." instance=ExtResource("3_ugxr4")]
+visible = false
+position = Vector2(24, -80)
+metadata/_edit_lock_ = true
+
+[node name="GameOverArea2" parent="." instance=ExtResource("3_ugxr4")]
+visible = false
+position = Vector2(24, 160)
+metadata/_edit_lock_ = true
