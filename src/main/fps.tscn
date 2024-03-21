@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c6h0b0wetuowg"]
 
-[ext_resource type="Script" path="res://src/fps.gd" id="1_7rakn"]
+[ext_resource type="Script" path="res://src/main/fps.gd" id="1_7rakn"]
 
 [node name="FPS" type="Label"]
 script = ExtResource("1_7rakn")

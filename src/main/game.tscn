@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://bo6jrhkldrk75"]
 
-[ext_resource type="Script" path="res://src/parallax.gd" id="1_0w74d"]
-[ext_resource type="Script" path="res://src/game.gd" id="1_osep5"]
-[ext_resource type="PackedScene" uid="uid://sb2l0qnpf27d" path="res://player.tscn" id="1_otp77"]
+[ext_resource type="Script" path="res://src/main/parallax.gd" id="1_0w74d"]
+[ext_resource type="Script" path="res://src/main/game.gd" id="1_osep5"]
 [ext_resource type="PackedScene" uid="uid://ddkecm5lsq4e" path="res://assets/tilemap/background_tilemap.tscn" id="2_qjanh"]
+[ext_resource type="PackedScene" uid="uid://sb2l0qnpf27d" path="res://src/player/player.tscn" id="4_re4ln"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gj2pm"]
 size = Vector2(386, 20)
@@ -31,7 +31,7 @@ motion_mirroring = Vector2(640, 0)
 [node name="TileMap" parent="ParallaxBackground/ParallaxLayer2" instance=ExtResource("2_qjanh")]
 layer_0/tile_data = PackedInt32Array(65543, 851970, 7, 65544, 917506, 7, 65545, 983042, 7, 196625, 1048578, 7, 655374, 851970, 7, 655375, 917506, 7, 655376, 983042, 7, 524299, 1048578, 7, 65568, 851970, 7, 65569, 917506, 7, 65570, 983042, 7, 458778, 851970, 7, 458779, 917506, 7, 458780, 983042, 7, 524289, 851970, 7, 524290, 983042, 7)
 
-[node name="Player" parent="." instance=ExtResource("1_otp77")]
+[node name="Player" parent="." instance=ExtResource("4_re4ln")]
 position = Vector2(30, 90)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
