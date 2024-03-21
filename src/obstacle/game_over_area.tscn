@@ -1,10 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfk1t58xr2hwq"]
+[gd_scene load_steps=3 format=3 uid="uid://cfk1t58xr2hwq"]
+
+[ext_resource type="Script" path="res://src/obstacle/game_over_area.gd" id="1_5dthv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v2qqs"]
 size = Vector2(48, 160)
 
 [node name="GameOverArea" type="Area2D"]
 collision_layer = 0
+script = ExtResource("1_5dthv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_v2qqs")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
