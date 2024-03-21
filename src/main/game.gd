@@ -12,10 +12,13 @@ func _ready() -> void:
 
 func _set_obstacle_position(instance) -> void:
 	var rand = randi_range(20, 80)
-	instance.global_position = Vector2(Globals.spawn_point, rand)
+	instance.global_position = Vector2(Game.spawn_point, rand)
 
 
 func _create_obstacle() -> void:
+	if Game.is_game_over:
+		return
+
 	var instance := obstacle.instantiate()
 	_set_obstacle_position(instance)
 	obstacles_container.add_child(instance)

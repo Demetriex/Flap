@@ -7,6 +7,9 @@ var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
 func _physics_process(delta: float) -> void:
+	if Game.is_game_over:
+		set_process(false)
+
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
