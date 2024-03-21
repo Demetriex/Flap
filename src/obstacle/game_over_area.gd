@@ -2,4 +2,4 @@ extends Area2D
 
 
 func _on_body_entered(_body: Node2D) -> void:
-	EventBus.game_over.emit()
+	Game.is_game_over = true
