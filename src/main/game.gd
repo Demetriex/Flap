@@ -7,7 +7,12 @@ var obstacle := preload("res://src/obstacle/obstacle.tscn")
 
 
 func _ready() -> void:
-	timer.connect("timeout", self._create_obstacle)
+	timer.connect("timeout", _create_obstacle)
+	EventBus.game_over.connect(_is_game_over)
+
+
+func _is_game_over():
+	timer.stop()
 
 
 func _set_obstacle_position(instance) -> void:
@@ -16,9 +21,6 @@ func _set_obstacle_position(instance) -> void:
 
 
 func _create_obstacle() -> void:
-	if Game.is_game_over:
-		return
-
 	var instance := obstacle.instantiate()
 	_set_obstacle_position(instance)
 	obstacles_container.add_child(instance)
