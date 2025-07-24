@@ -1,7 +1,7 @@
 extends Node
 
 
-@onready var game_over_screen = $GameOverScreen
+@onready var game_over_screen = $UI/GameOverScreen
 
 func _ready() -> void:
 	EventBus.game_over.connect(is_game_over)

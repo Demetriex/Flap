@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://1kfal8st3ofp"]
+[gd_scene load_steps=5 format=3 uid="uid://1kfal8st3ofp"]
 
 [ext_resource type="Script" path="res://src/obstacle/obstacle.gd" id="1_7n28x"]
 [ext_resource type="PackedScene" uid="uid://ddkecm5lsq4e" path="res://assets/tilemap/background_tilemap.tscn" id="2_kgpcs"]
 [ext_resource type="PackedScene" uid="uid://cfk1t58xr2hwq" path="res://src/obstacle/game_over_area.tscn" id="3_ugxr4"]
+[ext_resource type="PackedScene" uid="uid://dpr4pxi7eab7u" path="res://src/obstacle/point_area.tscn" id="4_1hirc"]
 
 [node name="Obstacle" type="Node2D"]
 script = ExtResource("1_7n28x")
@@ -20,3 +21,5 @@ metadata/_edit_lock_ = true
 visible = false
 position = Vector2(24, 160)
 metadata/_edit_lock_ = true
+
+[node name="PointArea" parent="." instance=ExtResource("4_1hirc")]

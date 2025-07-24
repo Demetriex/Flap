@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://7qxp74yoy60c"]
+[gd_scene load_steps=5 format=3 uid="uid://7qxp74yoy60c"]
 
 [ext_resource type="PackedScene" uid="uid://bo6jrhkldrk75" path="res://src/main/game.tscn" id="1_er56x"]
 [ext_resource type="Script" path="res://src/main/main.gd" id="1_pb1gc"]
-[ext_resource type="PackedScene" uid="uid://dy26sni1m1w67" path="res://src/main/game_over_screen/game_over_screen.tscn" id="3_ntw2c"]
+[ext_resource type="PackedScene" uid="uid://dy26sni1m1w67" path="res://src/main/game_over.tscn" id="3_ntw2c"]
+[ext_resource type="PackedScene" uid="uid://d2sf0n8waq7vh" path="res://src/main/score.tscn" id="3_rfrl1"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_pb1gc")
@@ -25,5 +26,13 @@ render_target_update_mode = 4
 
 [node name="Game" parent="SubViewportContainer/SubViewport" instance=ExtResource("1_er56x")]
 
-[node name="GameOverScreen" parent="." instance=ExtResource("3_ntw2c")]
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="GameOverScreen" parent="UI" instance=ExtResource("3_ntw2c")]
 visible = false
+
+[node name="Label" parent="UI" instance=ExtResource("3_rfrl1")]
+offset_left = 60.0
+offset_top = 32.0
+offset_right = 108.0
+offset_bottom = 128.0

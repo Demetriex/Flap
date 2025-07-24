@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpr4pxi7eab7u"]
+
+[ext_resource type="Script" path="res://src/obstacle/point_area.gd" id="1_hljyh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8d675"]
+size = Vector2(46, 82)
+
+[node name="PointArea" type="Area2D"]
+collision_layer = 0
+script = ExtResource("1_hljyh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(24, 40)
+shape = SubResource("RectangleShape2D_8d675")
+
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

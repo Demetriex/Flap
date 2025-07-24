@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2sf0n8waq7vh"]
+
+[ext_resource type="Theme" uid="uid://dbqna8rwn4w5n" path="res://assets/text/score_label.tres" id="1_m5fs6"]
+[ext_resource type="Script" path="res://src/main/score.gd" id="2_l6yfy"]
+
+[node name="Label" type="Label"]
+offset_left = 1.0
+offset_right = 33.0
+offset_bottom = 96.0
+size_flags_horizontal = 4
+theme = ExtResource("1_m5fs6")
+text = "0"
+script = ExtResource("2_l6yfy")
