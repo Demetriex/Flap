@@ -7,12 +7,17 @@ var obstacle := preload("res://src/obstacle/obstacle.tscn")
 
 
 func _ready() -> void:
-	timer.connect("timeout", self._create_obstacle)
+	timer.connect("timeout", _create_obstacle)
+	EventBus.game_over.connect(_is_game_over)
+
+
+func _is_game_over():
+	timer.stop()
 
 
 func _set_obstacle_position(instance) -> void:
 	var rand = randi_range(20, 80)
-	instance.global_position = Vector2(Globals.spawn_point, rand)
+	instance.global_position = Vector2(Game.spawn_point, rand)
 
 
 func _create_obstacle() -> void:

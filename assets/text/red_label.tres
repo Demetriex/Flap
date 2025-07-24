@@ -1,0 +1,11 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://b3a683m64hb45"]
+
+[ext_resource type="FontFile" uid="uid://bhra06c2b7u7o" path="res://assets/fonts/kenney_pixel.tres" id="1_rxcs6"]
+
+[resource]
+Label/colors/font_color = Color(0.752941, 0.223529, 0.168627, 1)
+Label/colors/font_outline_color = Color(0.905882, 0.298039, 0.235294, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/outline_size = 32
+Label/font_sizes/font_size = 256
+Label/fonts/font = ExtResource("1_rxcs6")
